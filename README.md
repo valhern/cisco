@@ -1,3 +1,8 @@
 # cisco
 
-lolo
+Ta maquette représente une petite infrastructure réseau que l’on pourrait retrouver dans une vraie entreprise. J’y ai organisé plusieurs groupes d’utilisateurs en créant différents VLANs, chacun correspondant à un service ou un type d’usage. Chaque VLAN contient deux postes, ce qui permet de simuler plusieurs départements séparés les uns des autres. Tous ces postes sont reliés à un switch central, et ce switch est lui-même connecté à un routeur. L’idée, c’est de montrer comment on segmente un réseau pour améliorer la sécurité, éviter que tout le monde soit sur le même broadcast domain, et garder un environnement propre et structuré.
+
+Pour construire cette maquette, j’ai d’abord créé tous les VLANs sur le switch, puis j’ai attribué chaque port au bon VLAN. Ensuite, j’ai configuré le lien entre le switch et le routeur en mode trunk, ce qui permet de transporter plusieurs VLANs sur un seul câble. Sur le routeur, j’ai mis en place ce qu’on appelle un “Router‑on‑a‑Stick” : une sous‑interface par VLAN, chacune avec sa propre adresse IP, qui sert de passerelle pour les machines. J’ai aussi défini un plan d’adressage cohérent pour que chaque VLAN ait son propre sous‑réseau. Une fois tout configuré, j’ai testé la communication entre les machines pour vérifier que les postes d’un même VLAN se voient bien, et que le routage entre VLANs fonctionne correctement.
+
+Ce projet montre que je sais concevoir et configurer une architecture réseau complète : création de VLANs, configuration d’un switch Cisco, mise en place d’un trunk, routage inter‑VLAN, plan d’adressage IP et tests de connectivité. C’est exactement le type de compétences qu’on attend d’un technicien réseau ou cybersécurité, et cette maquette prouve que je suis capable de mettre en place une infrastructure propre, organisée et fonctionnelle.
+
